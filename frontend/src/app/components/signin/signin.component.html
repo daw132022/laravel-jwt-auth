@@ -1,0 +1,33 @@
+<!-- LOGIN -->
+
+    <div class="contenedor-login">
+
+      <div class="d-flex flex-column bd-highlight">
+        <h1 class="t-ficha text-dark text-center mt-5 mb-4">
+          Inicia Sesión
+        </h1>
+    </div>
+
+
+    <h6 class="titulo-ficha text-dark text-center mt-4">
+      Correo electrónico
+    </h6>
+    <form [formGroup]="loginForm">
+      <div class="form-floating mt-2 mb-4 w-25 m-auto">
+        <input type="text" class="form-control" id="floatingInput" formControlName="email">
+        <label for="floatingInput">Correo electrónico</label>
+      </div>
+
+      <h6 class="titulo-ficha text-dark text-center mt-2">
+        Contraseña
+      </h6>
+        <div class="form-floating mt-2 mb-4 w-25 m-auto">
+          <input type="password" class="form-control" id="floatingInput" formControlName="password">
+          <label for="floatingInput">Contraseña</label>
+        </div>
+
+
+            <div class="b-peticiones mt-5">
+              <button type="button" class="btn btn-danger m-auto" (click)="onSubmit()">Iniciar sesión</button>
+            </div>
+          </form>

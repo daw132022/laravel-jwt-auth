@@ -1,0 +1,139 @@
+/*HOME*/
+
+/* NAV */
+.navbar-brand {
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 30px;
+
+}
+
+/* LOGO */
+
+.icono{
+  margin-left: 150px;
+  font-weight: bold;
+
+}
+
+
+/* BOTON BUSCAR */
+
+.btn-outline-light{
+
+  margin-left: 50px;
+  margin-right: 150px;
+}
+
+
+/* CONTENEDOR */
+
+/* IMAGEN */
+
+.img-fondo {
+  position: absolute;
+  z-index: -1;
+  width: 1330px;
+  height: 900px;
+}
+
+/* CARRUSEL */
+
+.carousel-slide {
+  position: absolute;
+  z-index: 1;
+
+}
+
+.carousel-inner img {
+
+  max-width: 1000px;
+  max-height: 800px;
+  display: block;
+  margin:auto;
+
+}
+
+/* CARD-CHANGE_ORG */
+
+.card {
+  max-width: 1000px;
+  max-height: 800px;
+  margin: auto;
+
+
+}
+
+
+
+/* FOOTER */
+
+.hr {
+  border: 1px solid #DC3545;
+
+}
+
+
+/*LISTADO DE PETICIONES*/
+
+/* SUBMENU NAVEGACION */
+
+.t-listado{
+  font-weight: bolder;
+  font-size: 39px;
+}
+
+.nav-item a:hover{
+  color:#DC3545;
+
+}
+
+
+
+/* CARD-LISTADO_PETICIONES */
+
+
+/* BOTON */
+.b-peticiones{
+  margin:auto;
+  text-align: center;
+  margin-bottom: 50px;
+}
+
+
+/* CONTENEDOR CREAR PETICION*/
+
+.t-ficha{
+  font-weight: bolder;
+  font-size: 39px;
+}
+
+.titulo-ficha{
+  display: flex;
+  margin-left: 720px;
+
+}
+
+/* CONTENEDOR FICHA */
+
+.contenedor-ficha{
+  height: 1250px;
+}
+
+/* IMAGEN */
+
+.img-ficha {
+
+  width: 800px;
+  height: 400px;
+  margin: auto;
+  border-radius: 20px;
+}
+
+/* TEXTO */
+
+.texto{
+  width: 800px;
+  height: 400px;
+  margin: auto;
+
+}

@@ -1,0 +1,47 @@
+<form [formGroup]="registerForm">
+
+  <div class="contenedor-register">
+
+      <div class="d-flex flex-column bd-highlight">
+          <h1 class="t-ficha text-dark text-center mt-5 mb-4">
+              Registrarse
+          </h1>
+      </div>
+
+      <h6 class="titulo-ficha text-dark text-center mt-4">
+          Nombre
+      </h6>
+      <div class="form-floating mt-2 mb-4 w-25 m-auto">
+          <input name="name" type="text" class="form-control" id="floatingInput" formControlName="name">
+          <label for="floatingInput">Nombre</label>
+      </div>
+
+
+      <h6 class="titulo-ficha text-dark text-center mt-4">
+          Correo electrónico
+      </h6>
+      <div class="form-floating mt-2 mb-4 w-25 m-auto">
+          <input name="email" type="text" class="form-control" id="floatingInput" formControlName="email">
+          <label for="floatingInput">Correo electrónico</label>
+      </div>
+
+      <h6 class="titulo-ficha text-dark text-center mt-2">
+          Contraseña
+      </h6>
+      <div class="form-floating mt-2 mb-4 w-25 m-auto">
+          <input name="password" type="password" class="form-control" id="floatingInput" formControlName="password">
+          <label for="floatingInput">Contraseña</label>
+      </div>
+
+      <h6 class="titulo-ficha text-dark text-center mt-2">
+          Roll id
+      </h6>
+      <div class="form-floating mt-2 mb-4 w-25 m-auto">
+          <input name="roll_id" type="number" class="form-control" id="floatingInput" formControlName="roll_id">
+          <label for="floatingInput">Roll id</label>
+      </div>
+
+
+      <div class="b-peticiones mt-5">
+          <button type="submit" class="btn btn-danger m-auto" (click)="onSubmit()">Registrarse</button>
+      </div>
