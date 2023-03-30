@@ -6,9 +6,88 @@
     495.261.374 personas que pasan a la acción Victorias cada día.
   </h6>
 </div>
-<div class="button d-flex justify-content-center align-items-center mb-5">
-  <form>
-    <button type="submit" class="btn btn-danger" routerLink="/peticiones/">Inicia una petición</button>
-  </form>
-
+<div class="button d-flex justify-content-center align-items-center mb-5 ">
+  <button type="button" *ngIf="isSignedIn" class="btn btn-danger"><a *ngIf="isSignedIn" routerLink="peticion/create" class="text-decoration-none text-light">Inicia una petición</a></button>
 </div>
+
+<!-- IMAGEN -->
+
+<img src="./assets/illustration-world-map-2015-08-18.webp" class="img-fondo" alt="img-fluid">
+
+<!-- CARRUSEL -->
+
+<div id="carouselWithControls" class="carousel slide" data-bs-ride="carousel">
+  <div class="carousel-inner">
+    <div class="carousel-item active">
+      <img src="./assets/bCeXlaPeNtysheG-800x450-noPad.jpg" class="d-block w-100" alt="Slide 1">
+    </div>
+    <div class="carousel-item">
+      <img src="./assets/XsogsjITuWxkLuq-800x450-noPad.jpg" class="d-block w-100" alt="Slide 2">
+    </div>
+    <div class="carousel-item">
+      <img src="./assets/yKclFtYyJqGrtLJ-800x450-noPad.jpg" class="d-block w-100" alt="Slide 3">
+    </div>
+  </div>
+  <a class="carousel-control-prev" href="#carouselWithControls" role="button" data-bs-slide="prev">
+    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+    <span class="visually-hidden">Previous</span>
+  </a>
+  <a class="carousel-control-next" href="#carouselWithControls" role="button" data-bs-slide="next">
+    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+    <span class="visually-hidden">Next</span>
+  </a>
+</div>
+
+<!-- CARD-CHANGE_ORG  -->
+
+
+<div class="card mt-5">
+  <div class="row g-0">
+    <div class="col-5 col-sm-4">
+      <img src="./assets/alba-molina-accidente-kFSC--1024x512@abc.png" class="img-fluid w-100" alt="card-horizontal-image">
+    </div>
+    <div class="col-7 col-sm-8">
+      <div class="card-body">
+        <h5 class="card-title">Justicia para Alba, nuestra hija asesinada por un guardarraíl en muy mal estado</h5>
+        <p class="card-text">Importante: No pedimos dinero, pedimos vuestra solidaridad y apoyo, especialmente vuestros comentarios, que nos reconfortan y nos dan mucho ánimo.
+        Nuestra hija Alba murió en un horrible accidente de tráfico. La conductora del vehículo, adulta y sobria, perdió 3 segundos el control del volante y el coche impactó con el guardarraíl. </p>
+        <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="card mt-3">
+  <div class="row g-0">
+    <div class="col-5 col-sm-4">
+      <img src="./assets/OveloMaQgyaNsNE-800x450-noPad.jpg" class="img-fluid w-100" alt="card-horizontal-image">
+    </div>
+    <div class="col-7 col-sm-8">
+      <div class="card-body">
+        <h5 class="card-title">Llamen al aeropuerto de Palma, Aeropuerto Internacional Rafael Nadal</h5>
+        <p class="card-text">Rafael Nadal es sin duda el mejor tenista de la historia y seguramente, el mejor embajador que tiene la isla de Mallorca. Por eso iniciamos esta recogida de firmas para pedir al Gobierno de España, a AENA y al Gobierno Balear que hagan cuanto esté en su mano para nombrar al aeropuerto de Mallorca, Aeropuerto de Mallorca - Rafa Nadal.</p>
+        <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+<div class="card mt-3">
+  <div class="row g-0">
+    <div class="col-5 col-sm-4">
+      <img src="./assets/EDuMvgAvSMwQgnp-800x450-noPad.jpg" class="img-fluid w-100" alt="card-horizontal-image">
+    </div>
+    <div class="col-7 col-sm-8">
+      <div class="card-body">
+        <h5 class="card-title">Por el derecho al Arte de la Danza y la Cultura</h5>
+        <p class="card-text">Soy Nacho Duato, bailarín, director y coreógrafo. He dirigido la Compañía Nacional de Danza durante 20 años. También he dirigido la StaatsOper de Berlín y el Ballet del Mikhailovsky, del que sigo siendo su actual director.
+        Mis coreografías forman parte de un gran número de compañías de danza de todo el mundo.
+        Quiero que leáis atentamente algo que tengo que deciros, y que luchéis conmigo recogiendo firmas para poder conseguir lo que los ciudadanos y ciudadanas españoles necesitan por derecho.</p>
+        <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+      </div>
+    </div>
+  </div>
+</div>
+
+

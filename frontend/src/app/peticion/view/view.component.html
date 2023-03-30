@@ -1,1 +1,36 @@
-<p>view works!</p>
+<div class="container">
+  <h1>Ver peticiones</h1>
+
+  <a href="#" routerLink="/peticion/index" class="btn btn-primary">Back</a>
+
+  <div>
+      <strong>Título:</strong>
+      <p>{{ peticion.titulo }}</p>
+  </div>
+
+  <div>
+      <strong>Descripcción:</strong>
+      <p>{{ peticion.descripcion }}</p>
+  </div>
+
+  <div>
+      <strong>Destinatario:</strong>
+      <p>{{ peticion.destinatario }}</p>
+  </div>
+
+<div>
+  <strong>Categoría:</strong>
+  <p>{{ peticion.categoria_id }}</p>
+</div>
+
+<div>
+  <strong>Firmantes:</strong>
+  <p>{{ peticion.firmantes }}</p>
+</div>
+
+<div>
+  <strong>Imagen:</strong>
+  <p>{{ peticion.image }}</p>
+</div>
+
+</div>

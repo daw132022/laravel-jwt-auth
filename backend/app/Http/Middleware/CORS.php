@@ -16,11 +16,12 @@ class CORS
      */
     public function handle(Request $request, Closure $next) {
         header('Access-Control-Allow-Origin: *');
-        header('Access-Control-Allow-Origin: Content-type, X-Auth-Token, Authorization, Origin');
+        header('Access-Control-Allow-Headers: Content-Type, X-Auth-Token, Authorization, Origin');
         //header('Access-Control-Allow-Origin: http://localhost:4200');
         // header('Access-Control-Allow-Headers: Content-type, X-Auth-Token, Authorization, Origin, Accept, Access-Control-Request-Method  ');
         // header('Access-Control-Request-Headers: * ');
-         header('Access-Control-Allow-Methods', 'GET, POST, PUT, DELETE, OPTIONS');
+        //header('Access-Control-Allow-Methods', 'GET, POST, PUT, DELETE, OPTIONS');
+        //header("Allow: GET, POST, OPTIONS, PUT, DELETE");
         return $next($request);
     }
 }

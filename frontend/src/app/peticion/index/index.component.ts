@@ -10,6 +10,7 @@ import { Peticion } from '../peticion';
 export class IndexComponent implements OnInit {
 
   peticiones: Peticion[] = [];
+isSignedIn: any;
 
   /*------------------------------------------
   --------------------------------------------

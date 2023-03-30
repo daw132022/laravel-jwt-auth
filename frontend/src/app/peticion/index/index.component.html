@@ -1,23 +1,26 @@
 <div class="container">
-  <h1>Angular 13 CRUD Example - ItSolutionStuff.com</h1>
+  <h1>Mis peticiones</h1>
 
-  <a href="#" routerLink="/peticion/create/" class="btn btn-success">Create New Post</a>
-
+  <a routerLink="/peticion/create/" class="btn btn-success">Crear nueva petición</a>
+  <!-- <a href="index.component.html"  *ngIf="isSignedIn" routerLink="/peticion/create" class="btn btn-success">Inicia una petición</a> -->
   <table class="table table-bordered">
     <tr>
       <th>ID</th>
-      <th>Title</th>
-      <th>Body</th>
-      <th width="220px">Action</th>
+      <th>Título</th>
+      <th>Descripcción</th>
+      <th width="220px">Acción</th>
     </tr>
     <tr *ngFor="let peticion of peticiones">
       <td>{{ peticion.id }}</td>
       <td>{{ peticion.titulo }}</td>
       <td>{{ peticion.descripcion }}</td>
       <td>
-        <a href="#" [routerLink]="['/peticion/', peticion.id, 'view']" class="btn btn-info">View</a>
-        <a href="#" [routerLink]="['/peticion/', peticion.id, 'edit']" class="btn btn-primary">Edit</a>
+        <a [routerLink]="['/peticion/', peticion.id, 'view']" class="btn btn-info">View</a>
+        <a [routerLink]="['/peticion/', peticion.id, 'edit']" class="btn btn-primary">Edit</a>
         <button type="button" (click)="deletePeticion(peticion.id)" class="btn btn-danger">Delete</button>
+        <!-- <a href="index" [routerLink]="['/peticion/', peticion.id, 'view']" class="btn btn-info">View</a>
+        <a href="edit" [routerLink]="['/peticion/', peticion.id, 'edit']" class="btn btn-primary">Edit</a>
+        <button type="button" (click)="deletePeticion(peticion.id)" class="btn btn-danger">Delete</button> -->
       </td>
     </tr>
   </table>

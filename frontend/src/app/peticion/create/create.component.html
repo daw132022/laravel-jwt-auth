@@ -1,1 +1,79 @@
-<p>create works!</p>
+<div class="contenedor-crear-peticion">
+  <div class="d-flex flex-column bd-highlight">
+    <h1 class="t-ficha text-dark text-center mt-5 mb-4">Crear petición</h1>
+  </div>
+
+  <a href="#" routerLink="/peticion/index" class="btn btn-primary">Back</a>
+
+  <form [formGroup]="form" (ngSubmit)="submit(form)">
+    <div class="form-group">
+      <label for="titulo">Título de la peticion:</label>
+      <input
+        formControlName="titulo"
+        id="titulo"
+        type="text"
+        class="form-control"
+      />
+    </div>
+
+    <div class="form-group">
+      <label for="descripcion">Desripcción</label>
+      <textarea
+        formControlName="descripcion"
+        id="descripcion"
+        type="text"
+        class="form-control"
+      ></textarea>
+    </div>
+
+    <div class="form-group">
+      <label for="destinatario">Destinatario</label>
+      <input
+        formControlName="destinatario"
+        id="destinatario"
+        type="text"
+        class="form-control"
+      >
+    </div>
+
+    <div class="form-group">
+      <label for="categoria_id">Categoría</label>
+      <input
+        formControlName="categoria_id"
+        id="categoria_id"
+        type="text"
+        class="form-control"
+      >
+    </div>
+
+    <div class="form-group">
+      <label for="firmantes">Firmantes</label>
+      <input
+        formControlName="firmantes"
+        id="firmantes"
+        type="text"
+        class="form-control"
+      >
+    </div>
+
+    <div class="form-group">
+      <label for="image">Introducir imagen</label>
+      <input (change)="onSelectImage($event)"
+        id="image"
+        type="file"
+        class="form-control"
+        formControlName="image"
+      >
+    </div>
+
+    <div class="col text-center m-5">
+      <button
+        type="submit"
+        class="btn btn-danger m-auto"
+        [disabled]="!form.valid"
+      >
+        Enviar petición
+      </button>
+    </div>
+  </form>
+</div>

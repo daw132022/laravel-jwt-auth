@@ -7,20 +7,15 @@
     <div class="collapse navbar-collapse show" id="navbarDark">
       <ul class="navbar-nav me-auto mb-2 mb-xl-0">
         <li class="nav-item">
-          <a class="nav-link active" aria-current="page" href="http://localhost:4200/peticiones"
-          routerLink="/peticiones/">Inicia una petición</a
+          <a class="nav-link active" aria-current="page"
+          routerLink="peticion/create">Inicia una petición</a
           >
         </li>
         <li class="nav-item">
-          <a class="nav-link active" href="#">Mis peticiones</a>
+          <a class="nav-link active" routerLink="peticion/user.id/index">Mis peticiones</a>
         </li>
         <li class="nav-item">
-          <a
-            class="nav-link active"
-            href="#"
-            tabindex="-1"
-            aria-disabled="true"
-            >Más peticiones</a
+          <a class="nav-link active" routerLink="peticion/index">Más peticiones</a
           >
         </li>
         <li class="nav-item">
@@ -36,9 +31,11 @@
       <a class="nav-link active" href="#"
         ><i class="fa fa-search" type="search"></i
       ></a>
-      <form class="d-flex">
-        <button class="btn btn-outline-light" type="submit" routerLink="/login" >Entrar</button>
-        <button class="btn btn-outline-light" type="submit" routerLink="/register" >Registrarse</button>
+      <form class="d-flex gap-3">
+        <button class="btn btn-outline-light"  type="submit" *ngIf="!isSignedIn" routerLink="/login" >Log In</button>
+        <button class="btn btn-outline-light" type="submit" *ngIf="isSignedIn" (click)="signOut()"
+        routerLink=" " >Log Out</button>
+        <button class="btn btn-outline-light" type="submit" *ngIf="!isSignedIn" routerLink="/register" >Registrarse</button>
       </form>
     </div>
   </div>

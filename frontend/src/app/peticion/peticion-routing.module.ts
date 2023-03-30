@@ -10,7 +10,8 @@ const routes: Routes = [
   { path: 'peticion/index', component: IndexComponent },
   { path: 'peticion/:peticionId/view', component: ViewComponent },
   { path: 'peticion/create', component: CreateComponent },
-  { path: 'peticion/:peticionId/edit', component: EditComponent }
+  { path: 'peticion/:peticionId/edit', component: EditComponent },
+  { path: 'peticion/:userId/index', component: IndexComponent }
 ];
 
 @NgModule({

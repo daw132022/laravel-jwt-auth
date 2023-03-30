@@ -9,6 +9,8 @@ import { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
 import { ReactiveFormsModule, FormsModule } from '@angular/forms';
 import { AuthInterceptor } from './shared/auth-interceptor.service';
 import { InicioComponent } from './inicio/inicio.component';
+import { PeticionModule } from './peticion/peticion.module';
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -16,6 +18,7 @@ import { InicioComponent } from './inicio/inicio.component';
     SignupComponent,
     UserProfileComponent,
     InicioComponent,
+
   ],
   imports: [
     BrowserModule,
@@ -23,6 +26,8 @@ import { InicioComponent } from './inicio/inicio.component';
     HttpClientModule,
     ReactiveFormsModule,
     FormsModule,
+    PeticionModule,
+
   ],
   providers: [
     {

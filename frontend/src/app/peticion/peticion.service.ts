@@ -11,7 +11,8 @@ import { Peticion } from './peticion';
 })
 export class PeticionService {
 
-  private apiURL = "http://http://127.0.0.1:8000/api";
+  private apiURL = "http://127.0.0.1:8000/api";
+
 
   /*------------------------------------------
   --------------------------------------------
@@ -20,7 +21,7 @@ export class PeticionService {
   --------------------------------------------*/
   httpOptions = {
     headers: new HttpHeaders({
-      'Content-Type': 'application/json'
+     'Content-Type': 'application/json'
     })
   }
 
@@ -38,7 +39,7 @@ export class PeticionService {
    */
   getAll(): Observable<any> {
 
-    return this.httpClient.get(this.apiURL + '/peticiones/')
+    return this.httpClient.get(this.apiURL + '/peticiones')
 
     .pipe(
       catchError(this.errorHandler)
@@ -50,9 +51,14 @@ export class PeticionService {
    *
    * @return response()
    */
-  create(post:Peticion): Observable<any> {
+  create(post: FormData): Observable<any> {
+    const headers = new HttpHeaders();
+    headers.append('Content-Type', 'multipart/form-data');
+    headers.append('Accept', 'application/json');
 
-    return this.httpClient.post(this.apiURL + '/peticiones/', JSON.stringify(post), this.httpOptions)
+    return this.httpClient.post(this.apiURL + '/peticiones', post, {
+      headers: headers
+    })
 
     .pipe(
       catchError(this.errorHandler)
@@ -66,7 +72,7 @@ export class PeticionService {
    */
   find(id:number): Observable<any> {
 
-    return this.httpClient.get(this.apiURL + '/peticiones/' + id)
+    return this.httpClient.get(this.apiURL + '/peticiones' + id)
 
     .pipe(
       catchError(this.errorHandler)
@@ -80,7 +86,7 @@ export class PeticionService {
    */
   update(id:number, post:Peticion): Observable<any> {
 
-    return this.httpClient.put(this.apiURL + '/peticiones/' + id, JSON.stringify(post), this.httpOptions)
+    return this.httpClient.put(this.apiURL + '/peticiones' + id, JSON.stringify(post), this.httpOptions)
 
     .pipe(
       catchError(this.errorHandler)
@@ -93,12 +99,14 @@ export class PeticionService {
    * @return response()
    */
   delete(id:number){
-    return this.httpClient.delete(this.apiURL + '/peticiones/' + id, this.httpOptions)
+    return this.httpClient.delete(this.apiURL + '/peticiones' + id, this.httpOptions)
 
     .pipe(
       catchError(this.errorHandler)
     )
   }
+
+
 
   /**
    * Write code on Method

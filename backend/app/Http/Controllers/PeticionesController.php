@@ -217,7 +217,7 @@ class PeticionesController extends Controller
 
         $validator = Validator::make($request->all(),
             [
-                'file' => 'required|mimes:png,jpg,jpeg|max:4096',
+                'image' => 'required|max:4096',
             ]);
         if ($validator->fails()) {
             return response()->json(['error' => $validator->errors()],
@@ -226,7 +226,7 @@ class PeticionesController extends Controller
 
         $input = $request->all();
         $peticion = new Peticione($input);
-        $file=$request->file('file');
+        $file=$request->file('image');
         $path = $file->store('public/peticiones');
         $fileName = uniqid() . $file->getClientOriginalName();
         $peticion->image = $path.$fileName;
