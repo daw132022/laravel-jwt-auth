@@ -56,7 +56,7 @@ export class PeticionService {
     headers.append('Content-Type', 'multipart/form-data');
     headers.append('Accept', 'application/json');
 
-    return this.httpClient.post(this.apiURL + '/peticiones', post, {
+    return this.httpClient.post(this.apiURL + '/peticiones/', post, {
       headers: headers
     })
 
@@ -72,7 +72,7 @@ export class PeticionService {
    */
   find(id:number): Observable<any> {
 
-    return this.httpClient.get(this.apiURL + '/peticiones' + id)
+    return this.httpClient.get(this.apiURL + '/peticiones/' + id)
 
     .pipe(
       catchError(this.errorHandler)
@@ -86,7 +86,7 @@ export class PeticionService {
    */
   update(id:number, post:Peticion): Observable<any> {
 
-    return this.httpClient.put(this.apiURL + '/peticiones' + id, JSON.stringify(post), this.httpOptions)
+    return this.httpClient.put(this.apiURL + '/peticiones/' + id, JSON.stringify(post), this.httpOptions)
 
     .pipe(
       catchError(this.errorHandler)
@@ -99,7 +99,7 @@ export class PeticionService {
    * @return response()
    */
   delete(id:number){
-    return this.httpClient.delete(this.apiURL + '/peticiones' + id, this.httpOptions)
+    return this.httpClient.delete(this.apiURL + '/peticiones/' + id, this.httpOptions)
 
     .pipe(
       catchError(this.errorHandler)

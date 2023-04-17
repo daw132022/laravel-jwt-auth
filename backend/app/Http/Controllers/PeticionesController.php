@@ -9,6 +9,7 @@ use App\Models\User;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Validator;
+use Illuminate\Support\Facades\Storage;
 /**
  * @OA\Info(
  *      version="1.0.0",
@@ -86,9 +87,10 @@ class PeticionesController extends Controller
     public function listMine(Request $request)
     {
         // parent::index()
-        //$user = Auth::user();
-        $id = 1;
-        $peticiones = Peticione::all()->where('user_id', $id);
+        $user = Auth::user();
+        //$id = 1;
+        $peticiones = Peticione::all()->where('user_id', $user);
+        //$peticiones = Peticione::all()->where('user_id', $id);
         return $peticiones;
     }
 
@@ -227,9 +229,9 @@ class PeticionesController extends Controller
         $input = $request->all();
         $peticion = new Peticione($input);
         $file=$request->file('image');
-        $path = $file->store('public/peticiones');
         $fileName = uniqid() . $file->getClientOriginalName();
-        $peticion->image = $path.$fileName;
+        Storage::put('public/peticiones/' . $fileName, file_get_contents($file->getRealPath()));
+        $peticion->image = $fileName;
 
 
 

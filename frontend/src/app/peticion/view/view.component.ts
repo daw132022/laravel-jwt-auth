@@ -31,9 +31,11 @@ export class ViewComponent implements OnInit {
    */
   ngOnInit(): void {
     this.id = this.route.snapshot.params['peticionId'];
+    console.log(this.id)
 
     this.peticionService.find(this.id).subscribe((data: Peticion)=>{
       this.peticion = data;
+      console.log(this.peticion)
     });
   }
 
